@@ -140,7 +140,7 @@ fun MealDetailsInputScreen(
             onReviewChanged = { newReview -> viewModel.updateReview(newReview) }
         )
 
-        Spacer(modifier = Modifier.height(25.dp))
+        Spacer(modifier = Modifier.weight(1f))
 
         Button(
             modifier = Modifier
