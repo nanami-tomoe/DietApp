@@ -1,5 +1,6 @@
 package com.dongguk.dietapp.viewmodel
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -89,6 +90,7 @@ class MealRecordViewModel : ViewModel() {
             currentMeal.price > 0 &&
             currentMeal.mealCalories > 0
         ) {
+            Log.d("MealRecordViewModel", "CurrentMeal: $currentMeal")
             meals = meals + currentMeal
             resetCurrentMeal()
         }

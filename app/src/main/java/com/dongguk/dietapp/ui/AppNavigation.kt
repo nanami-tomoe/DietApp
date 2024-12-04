@@ -48,7 +48,12 @@ fun AppNavigation() {
         }
 
         composable("diet_app_screen") {
-            DietAppScreen()
+            DietAppScreen(
+                viewModel = viewModel,
+                onNavigateToMealInput = {
+                    navController.navigate("meal_photo_type")
+                }
+            )
         }
     }
 }

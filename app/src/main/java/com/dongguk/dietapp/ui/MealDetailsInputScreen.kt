@@ -129,7 +129,7 @@ fun MealDetailsInputScreen(
         Spacer(modifier = Modifier.height(25.dp))
 
         PriceInputField(
-            price = currentMeal.price?.toString() ?: "",
+            price = currentMeal.price.toString() ?: "",
             onPriceChanged = { newPrice -> viewModel.updatePrice(newPrice.toInt()) }
         )
 
