@@ -179,12 +179,11 @@ fun MealLocationSelector(
     onDropdownToggle: (Boolean) -> Unit
 ) {
     Text(
-        text = "식사 장소 선택",
+        text = "📍 식사 장소 선택",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),
@@ -273,12 +272,11 @@ fun MealSelector(
     onDropdownToggle: (Boolean) -> Unit
 ){
     Text(
-        text = "음식 선택",
+        text = "🍽️ 음식 선택",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),
@@ -367,12 +365,11 @@ fun SnackOrDrinkSelector(
     onDropdownToggle: (Boolean) -> Unit
 ) {
     Text(
-        text = "간식/음료 선택",
+        text = "🥤 간식/음료 선택",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),
@@ -462,12 +459,11 @@ fun SideDishSelector(
     onDropdownToggle: (Boolean) -> Unit
 ) {
     Text(
-        text = "반찬 선택",
+        text = "🥢 반찬 선택",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),
@@ -554,12 +550,11 @@ fun PriceInputField(
 ) {
     // "가격 입력" 텍스트
     Text(
-        text = "가격 입력",
+        text = "💰 가격 입력",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),
@@ -643,12 +638,11 @@ fun ReviewInputField(
 ) {
     // "리뷰 입력" 텍스트
     Text(
-        text = "리뷰 입력",
+        text = "⭐ 리뷰 입력",
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-            fontWeight = FontWeight(500),
+            fontFamily = NanumBold,
             color = Color.Black,
             textAlign = TextAlign.Center,
         ),

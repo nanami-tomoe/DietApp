@@ -87,7 +87,7 @@ fun MealPhotoAndTypeScreen(
             style = TextStyle(
                 fontSize = 18.sp,
                 lineHeight = 22.5.sp,
-                fontFamily = FontFamily(Font(R.font.nanum_square_neo_bd)),
+                fontFamily = NanumBold,
                 fontWeight = FontWeight(700),
                 color = Color.Black,
             ),
@@ -137,7 +137,7 @@ fun MealPhotoAndTypeScreen(
                 style = TextStyle(
                     fontSize = 12.sp,
                     lineHeight = 15.sp,
-                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
+                    fontFamily = Nanum,
                     fontWeight = FontWeight(500),
                     color = Orange01
                 )
@@ -147,12 +147,11 @@ fun MealPhotoAndTypeScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "식사 종류 선택",
+            text = "\uD83D\uDD50 식사 종류 선택",
             style = TextStyle(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
-                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-                fontWeight = FontWeight(500),
+                fontFamily = NanumBold,
                 color = Color.Black,
             ),
             modifier = Modifier
@@ -184,8 +183,7 @@ fun MealPhotoAndTypeScreen(
                         style = TextStyle(
                             fontSize = 14.sp,
                             lineHeight = 20.sp,
-                            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-                            fontWeight = FontWeight(400),
+                            fontFamily = if (currentMeal.selectedMealType == meal) NanumBold else Nanum,
                             color = if (currentMeal.selectedMealType == meal) Orange01 else Color.Black,
                             textAlign = TextAlign.Center
                         )
@@ -197,12 +195,11 @@ fun MealPhotoAndTypeScreen(
         Spacer(modifier = Modifier.height(25.dp))
 
         Text(
-            text = "식사 날짜 입력",
+            text = "\uD83D\uDCC6 식사 날짜 입력",
             style = TextStyle(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
-                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
-                fontWeight = FontWeight(500),
+                fontFamily = NanumBold,
                 color = Color.Black,
                 textAlign = TextAlign.Center,
             ),
