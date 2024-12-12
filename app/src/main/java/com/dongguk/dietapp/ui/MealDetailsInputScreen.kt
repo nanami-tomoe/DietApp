@@ -70,7 +70,7 @@ fun MealDetailsInputScreen(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Ivory),
+            .background(Color.White),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
         Text(
@@ -78,7 +78,7 @@ fun MealDetailsInputScreen(
             style = TextStyle(
                 fontSize = 18.sp,
                 lineHeight = 22.5.sp,
-                fontFamily = FontFamily(Font(R.font.notosansbold)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_bd)),
                 fontWeight = FontWeight(700),
                 color = Color.Black,
             ),
@@ -160,7 +160,7 @@ fun MealDetailsInputScreen(
             Text(
                 text = "Submit",
                 style = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.notosansbold)),
+                    fontFamily = Jalnan,
                     fontSize = 16.sp
                 )
             )
@@ -183,7 +183,7 @@ fun MealLocationSelector(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -215,7 +215,7 @@ fun MealLocationSelector(
                 text = if (currentMeal.selectedMealLocation.isEmpty()) "식사 장소를 선택해주세요." else currentMeal.selectedMealLocation,
                 style = TextStyle(
                     fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight.Normal,
                     color = if (currentMeal.selectedMealLocation.isEmpty()) Color.Gray else Color.Black
                 )
@@ -254,7 +254,7 @@ fun MealLocationSelector(
                     text = location,
                     style = TextStyle(
                         fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.notosans)),
+                        fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                         fontWeight = FontWeight.Normal,
                         color = Color.Black
                     )
@@ -277,7 +277,7 @@ fun MealSelector(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -309,7 +309,7 @@ fun MealSelector(
                 text = if (currentMeal.selectedMeal.isEmpty()) "음식을 선택해주세요." else currentMeal.selectedMeal,
                 style = TextStyle(
                     fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight.Normal,
                     color = if (currentMeal.selectedMeal.isEmpty()) Color.Gray else Color.Black
                 )
@@ -348,7 +348,7 @@ fun MealSelector(
                     text = meal,
                     style = TextStyle(
                         fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.notosans)),
+                        fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                         fontWeight = FontWeight.Normal,
                         color = Color.Black
                     )
@@ -371,7 +371,7 @@ fun SnackOrDrinkSelector(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -403,7 +403,7 @@ fun SnackOrDrinkSelector(
                 text = if (currentMeal.selectedMeal.isEmpty()) "간식 또는 음료를 선택해주세요." else currentMeal.selectedMeal,
                 style = TextStyle(
                     fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight.Normal,
                     color = if (currentMeal.selectedMeal.isEmpty()) Color.Gray else Color.Black
                 )
@@ -442,7 +442,7 @@ fun SnackOrDrinkSelector(
                     text = meal,
                     style = TextStyle(
                         fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.notosans)),
+                        fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                         fontWeight = FontWeight.Normal,
                         color = Color.Black
                     )
@@ -466,7 +466,7 @@ fun SideDishSelector(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -498,7 +498,7 @@ fun SideDishSelector(
                 text = if (currentMeal.selectedSideDishes.isNullOrEmpty()) "반찬을 선택해주세요." else currentMeal.selectedSideDishes,
                 style = TextStyle(
                     fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight.Normal,
                     color = if (currentMeal.selectedSideDishes.isNullOrEmpty()) Color.Gray else Color.Black
                 )
@@ -537,7 +537,7 @@ fun SideDishSelector(
                     text = sideDish,
                     style = TextStyle(
                         fontSize = 16.sp,
-                        fontFamily = FontFamily(Font(R.font.notosans)),
+                        fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                         fontWeight = FontWeight.Normal,
                         color = Color.Black
                     )
@@ -558,7 +558,7 @@ fun PriceInputField(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -592,7 +592,7 @@ fun PriceInputField(
             },
             textStyle = TextStyle(
                 fontSize = 16.sp,
-                fontFamily = FontFamily(Font(R.font.notosans)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
@@ -613,7 +613,7 @@ fun PriceInputField(
                                 text = "가격을 입력해주세요.",
                                 style = TextStyle(
                                     fontSize = 16.sp,
-                                    fontFamily = FontFamily(Font(R.font.notosans)),
+                                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                                     fontWeight = FontWeight.Normal,
                                     color = Color.Gray
                                 )
@@ -625,7 +625,7 @@ fun PriceInputField(
                         text = "원",
                         style = TextStyle(
                             fontSize = 16.sp,
-                            fontFamily = FontFamily(Font(R.font.notosans)),
+                            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                             fontWeight = FontWeight.Normal,
                             color = Color.Gray
                         )
@@ -647,7 +647,7 @@ fun ReviewInputField(
         style = TextStyle(
             fontSize = 16.sp,
             lineHeight = 20.sp,
-            fontFamily = FontFamily(Font(R.font.notosans)),
+            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
             fontWeight = FontWeight(500),
             color = Color.Black,
             textAlign = TextAlign.Center,
@@ -677,7 +677,7 @@ fun ReviewInputField(
             onValueChange = { newReview -> onReviewChanged(newReview) },
             textStyle = TextStyle(
                 fontSize = 16.sp,
-                fontFamily = FontFamily(Font(R.font.notosans)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                 fontWeight = FontWeight.Normal,
                 color = Color.Black
             ),
@@ -690,7 +690,7 @@ fun ReviewInputField(
                         text = "리뷰를 입력해주세요.",
                         style = TextStyle(
                             fontSize = 16.sp,
-                            fontFamily = FontFamily(Font(R.font.notosans)),
+                            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                             fontWeight = FontWeight.Normal,
                             color = Color.Gray
                         )

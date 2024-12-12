@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -35,7 +36,7 @@ fun DietAppScreen(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Ivory),
+            .background(Color.White),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.Start
     ) {
@@ -47,14 +48,14 @@ fun DietAppScreen(
             Text(
                 text = "한달간 섭취한 칼로리 총량",
                 style = TextStyle(
-                    fontFamily = NotoSansBold,
+                    fontFamily = NanumBold,
                     fontSize = 24.sp
                 )
             )
             Text(
                 text = "$totalCalories kcal",
                 style = TextStyle(
-                    fontFamily = NotoSansBold,
+                    fontFamily = NanumBold,
                     fontSize = 20.sp
                 )
             )
@@ -70,14 +71,14 @@ fun DietAppScreen(
             Text(
                 text = "한달간 지불한 식사 비용",
                 style = TextStyle(
-                    fontFamily = NotoSansBold,
+                    fontFamily = NanumBold,
                     fontSize = 24.sp
                 )
             )
             Text(
                 text = "${totalCost}원",
                 style = TextStyle(
-                    fontFamily = NotoSansBold,
+                    fontFamily = NanumBold,
                     fontSize = 20.sp
                 )
             )

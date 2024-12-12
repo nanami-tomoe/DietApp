@@ -80,14 +80,14 @@ fun MealPhotoAndTypeScreen(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Ivory)
+            .background(Color.White)
     ) {
         Text(
             text = "식사 입력하기",
             style = TextStyle(
                 fontSize = 18.sp,
                 lineHeight = 22.5.sp,
-                fontFamily = FontFamily(Font(R.font.notosansbold)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_bd)),
                 fontWeight = FontWeight(700),
                 color = Color.Black,
             ),
@@ -137,7 +137,7 @@ fun MealPhotoAndTypeScreen(
                 style = TextStyle(
                     fontSize = 12.sp,
                     lineHeight = 15.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight(500),
                     color = Orange01
                 )
@@ -151,7 +151,7 @@ fun MealPhotoAndTypeScreen(
             style = TextStyle(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
-                fontFamily = FontFamily(Font(R.font.notosans)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                 fontWeight = FontWeight(500),
                 color = Color.Black,
             ),
@@ -184,7 +184,7 @@ fun MealPhotoAndTypeScreen(
                         style = TextStyle(
                             fontSize = 14.sp,
                             lineHeight = 20.sp,
-                            fontFamily = FontFamily(Font(R.font.notosans)),
+                            fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                             fontWeight = FontWeight(400),
                             color = if (currentMeal.selectedMealType == meal) Orange01 else Color.Black,
                             textAlign = TextAlign.Center
@@ -201,7 +201,7 @@ fun MealPhotoAndTypeScreen(
             style = TextStyle(
                 fontSize = 16.sp,
                 lineHeight = 20.sp,
-                fontFamily = FontFamily(Font(R.font.notosans)),
+                fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                 fontWeight = FontWeight(500),
                 color = Color.Black,
                 textAlign = TextAlign.Center,
@@ -227,7 +227,7 @@ fun MealPhotoAndTypeScreen(
                 text = if (selectedDate.isEmpty()) "MM/DD/YYYY" else selectedDate,
                 style = TextStyle(
                     fontSize = 16.sp,
-                    fontFamily = FontFamily(Font(R.font.notosans)),
+                    fontFamily = FontFamily(Font(R.font.nanum_square_neo_rg)),
                     fontWeight = FontWeight.Normal,
                     color = if (selectedDate.isEmpty()) Color.Gray else Color.Black
                 )
@@ -270,7 +270,7 @@ fun MealPhotoAndTypeScreen(
             Text(
                 text = "Next",
                 style = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.notosansbold)),
+                    fontFamily = Jalnan,
                     fontSize = 16.sp
                 )
             )

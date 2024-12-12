@@ -29,8 +29,9 @@ import com.dongguk.dietapp.R
 import com.dongguk.dietapp.ui.theme.LightGray
 import com.dongguk.dietapp.ui.theme.Orange01
 
-val NotoSans = FontFamily(Font(R.font.notosans))
-val NotoSansBold = FontFamily(Font(R.font.notosansbold))
+val Nanum = FontFamily(Font(R.font.nanum_square_neo_rg))
+val NanumBold = FontFamily(Font(R.font.nanum_square_neo_bd))
+val Jalnan = FontFamily(Font(R.font.jalnan))
 
 @Composable
 fun StartRecordScreen(
@@ -41,7 +42,7 @@ fun StartRecordScreen(
         modifier = modifier
             .fillMaxSize()
             .padding(bottom = 48.dp)
-            .background(LightGray),
+            .background(Color(0xFFFEF3E2)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -49,17 +50,18 @@ fun StartRecordScreen(
         Text(
             text = "여러분의 교내 식사 습관을 관리하고 기록하세요!",
             style = TextStyle(
-                fontFamily = NotoSansBold,
-                fontSize = 28.sp
+                fontFamily = Jalnan,
+                fontSize = 28.sp,
+                color = Color(0xFF402E32)
             ),
             modifier = Modifier.padding(top = 27.dp, start = 19.dp, end = 19.dp)
         )
         Text(
             text = "\"동국한끼는 식사 기록, 비용 계산, 칼로리 확인까지 한번에 관리할 수 있도록 도와줍니다. 매일 교내 식당과 카페에서 먹은 식사 기록을 기록하고 이를 토대로 개인의 식단을 관리할 수 있습니다.\"",
             style = TextStyle(
-                fontFamily = NotoSans,
+                fontFamily = Nanum,
                 fontSize = 16.sp,
-                color = Color.Black.copy(alpha = 0.5f)
+                color = Color(0xFF402E32).copy(alpha = 0.5f)
             ),
             modifier = Modifier.padding(top = 10.dp, bottom = 27.dp, start = 19.dp, end = 19.dp)
         )
@@ -79,7 +81,7 @@ fun StartRecordScreen(
             Text(
                 text = "Start",
                 style = TextStyle(
-                    fontFamily = NotoSansBold, // 커스텀 폰트 적용
+                    fontFamily = Jalnan, // 커스텀 폰트 적용
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp // 글자 크기
                 )

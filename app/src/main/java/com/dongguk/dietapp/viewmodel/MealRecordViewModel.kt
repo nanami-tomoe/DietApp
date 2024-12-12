@@ -82,17 +82,19 @@ class MealRecordViewModel : ViewModel() {
         currentMeal = currentMeal.copy(review = newReview)
     }
 
-    // 현재 식사 추가
     fun addMeal() {
+        Log.d("MealRecordViewModel", "Adding Meal: $currentMeal")
         if (currentMeal.selectedMealType.isNotEmpty() &&
             currentMeal.selectedMealLocation.isNotEmpty() &&
             currentMeal.selectedMeal.isNotEmpty() &&
             currentMeal.price > 0 &&
             currentMeal.mealCalories > 0
         ) {
-            Log.d("MealRecordViewModel", "CurrentMeal: $currentMeal")
             meals = meals + currentMeal
+            Log.d("MealRecordViewModel", "Meal added. Meals: $meals")
             resetCurrentMeal()
+        } else {
+            Log.e("MealRecordViewModel", "Meal not added. CurrentMeal: $currentMeal")
         }
     }
 
