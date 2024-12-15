@@ -1,11 +1,14 @@
 package com.dongguk.dietapp.ui
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dongguk.dietapp.viewmodel.MealRecordViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
@@ -49,10 +52,8 @@ fun AppNavigation() {
 
         composable("diet_app_screen") {
             DietAppScreen(
+                navController = navController,
                 viewModel = viewModel,
-                onNavigateToMealInput = {
-                    navController.navigate("meal_photo_type")
-                }
             )
         }
     }
