@@ -32,6 +32,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.dongguk.dietapp.R
 
+
+// 아직 개발 중입니다. 추후에 리팩토링 하면서 추가할 예정입니다.
+
+
 @Composable
 fun BottomNavigationBar(
     navController: NavController
