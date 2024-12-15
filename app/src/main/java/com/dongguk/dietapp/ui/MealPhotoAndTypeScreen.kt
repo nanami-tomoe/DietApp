@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import com.dongguk.dietapp.R
 import com.dongguk.dietapp.data.DataSource
+import com.dongguk.dietapp.ui.components.ErrorDialog
 import com.dongguk.dietapp.ui.theme.Ivory
 import com.dongguk.dietapp.ui.theme.Orange01
 import com.dongguk.dietapp.viewmodel.MealRecordViewModel
@@ -76,6 +77,15 @@ fun MealPhotoAndTypeScreen(
             }
         }
     )
+
+    // 유효성 검사: 모든 조건이 충족되었는지 확인
+    val isFormValid = remember(currentMeal.photoUri, currentMeal.selectedMealType, selectedDate) {
+        currentMeal.photoUri.isNotEmpty() &&
+                currentMeal.selectedMealType.isNotEmpty() &&
+                selectedDate.isNotEmpty()
+    }
+
+    var showErrorDialog by remember { mutableStateOf(false) } // 에러 다이얼로그 상태 추가
 
     Column(
         modifier = Modifier
@@ -255,8 +265,12 @@ fun MealPhotoAndTypeScreen(
                 .height(56.dp)
                 .align(Alignment.CenterHorizontally),
             onClick = {
-                viewModel.addMeal()
-                onNextClicked() // 클릭 시 콜백 호출
+                if (isFormValid) {
+                    viewModel.addMeal()
+                    onNextClicked()
+                } else {
+                    showErrorDialog = true // 에러 다이얼로그 표시
+                }
             },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Orange01,
@@ -274,14 +288,24 @@ fun MealPhotoAndTypeScreen(
         }
 
         Spacer(modifier = Modifier.height(78.dp))
-
     }
+
+    // 에러 다이얼로그 표시
+    if (showErrorDialog) {
+        ErrorDialog(
+            message = "모든 항목을 입력해주세요.",
+            onDismiss = { showErrorDialog = false }
+        )
+    }
+
 }
 
 fun convertMillisToDate(millis: Long): String {
     val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     return formatter.format(Date(millis))
 }
+
+
 
 @Preview
 @Composable

@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import com.dongguk.dietapp.R
 import com.dongguk.dietapp.data.DataSource
 import com.dongguk.dietapp.data.RecordUiState
+import com.dongguk.dietapp.ui.components.ErrorDialog
 import com.dongguk.dietapp.ui.theme.Ivory
 import com.dongguk.dietapp.ui.theme.Orange01
 import com.dongguk.dietapp.ui.theme.Orange02
@@ -66,6 +67,20 @@ fun MealDetailsInputScreen(
     var isLocationDropdownExpanded by remember { mutableStateOf(false) }
     var isFoodDropdownExpanded by remember { mutableStateOf(false) }
     var isSideDishDropdownExpanded by remember { mutableStateOf(false) }
+
+    // 입력 유효성 검사
+    val isFormValid = remember(
+        currentMeal.selectedMeal,
+        currentMeal.selectedSideDishes,
+        currentMeal.price,
+        currentMeal.review
+    ) {
+        currentMeal.selectedMeal.isNotEmpty() &&
+                currentMeal.price > 0 &&
+                currentMeal.review.isNotEmpty()
+    }
+
+    var showErrorDialog by remember { mutableStateOf(false) } // 에러 다이얼로그 상태 추가
 
     Column(
         modifier = Modifier
@@ -148,8 +163,12 @@ fun MealDetailsInputScreen(
                 .height(56.dp)
                 .align(Alignment.CenterHorizontally),
             onClick = {
-                viewModel.addMeal()
-                onSubmitClicked()
+                if (isFormValid) {
+                    viewModel.addMeal()
+                    onSubmitClicked()
+                } else {
+                    showErrorDialog = true // 에러 다이얼로그 표시
+                }
             },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Orange01,
@@ -167,6 +186,14 @@ fun MealDetailsInputScreen(
         }
 
         Spacer(modifier = Modifier.height(78.dp))
+    }
+
+    // 에러 다이얼로그 표시
+    if (showErrorDialog) {
+        ErrorDialog(
+            message = "모든 항목을 입력해주세요.\n(반찬은 필수 X)",
+            onDismiss = { showErrorDialog = false }
+        )
     }
 }
 
