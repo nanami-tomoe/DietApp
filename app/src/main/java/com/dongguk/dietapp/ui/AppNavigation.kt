@@ -45,16 +45,22 @@ fun AppNavigation() {
             MealDetailsInputScreen(
                 viewModel = viewModel,
                 onSubmitClicked = {
-                    navController.navigate("diet_app_screen")
+                    navController.navigate("meal_analysis_screen")
                 }
             )
         }
 
-        composable("diet_app_screen") {
-            DietAppScreen(
-                navController = navController,
+        // 식사 분석 화면
+        composable("meal_analysis_screen") {
+            MealAnalysisScreen(
                 viewModel = viewModel,
+                navController = navController // NavigationController 전달
             )
+        }
+
+        // 식사 기록 화면
+        composable("meal_record") {
+            DisplayScreen(viewModel = viewModel) // MealRecordViewModel을 전달
         }
     }
 }
