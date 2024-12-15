@@ -93,7 +93,8 @@ class MealRecordViewModel : ViewModel() {
             currentMeal.selectedMealLocation.isNotEmpty() &&
             currentMeal.selectedMeal.isNotEmpty() &&
             currentMeal.price > 0 &&
-            currentMeal.mealCalories > 0
+            currentMeal.mealCalories > 0 &&
+            currentMeal.photoUri.isNotEmpty()
         ) {
             meals = meals + currentMeal
             Log.d("MealRecordViewModel", "Meal added. Meals: $meals")
