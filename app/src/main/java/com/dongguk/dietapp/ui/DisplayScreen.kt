@@ -157,7 +157,7 @@ fun DisplayScreen(viewModel: MealRecordViewModel) {
                 }
             }
 
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
             // 선택된 월의 데이터 LazyColumn으로 표시
             LazyColumn(
@@ -225,7 +225,7 @@ fun DisplayScreen(viewModel: MealRecordViewModel) {
 
                                 // 날짜
                                 Text(
-                                    text = "음식 이름: ${meal.date}",
+                                    text = "식사 날짜: ${meal.date}",
                                     style = TextStyle(
                                         fontSize = 14.sp,
                                         lineHeight = 30.sp,
@@ -273,27 +273,39 @@ fun MealDetailDialog(meal: RecordUiState, onDismiss: () -> Unit) {
                     .padding(8.dp), // 여백 추가
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                if (meal.photoUri.isNotEmpty()) {
-                    AsyncImage(
-                        model = meal.photoUri, // 이미지 URI
-                        contentDescription = "Meal Photo",
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(200.dp)
-                            .background(Color.LightGray),
-                        contentScale = ContentScale.Crop
-                    )
-                }
+                AsyncImage(
+                    model = meal.photoUri, // 이미지 URI
+                    contentDescription = "Meal Photo",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .background(Color.LightGray),
+                    contentScale = ContentScale.Crop
+                )
 
                 Text(
                     text = "음식: ${meal.selectedMeal}",
                     style = TextStyle(
-                        fontFamily = Nanum, // Nanum 폰트 설정
+                        fontFamily = Nanum,
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Normal,
-                        color = Color.Black // 텍스트 색상 설정
+                        color = Color.Black
                     )
                 )
+
+                // 조식, 중식, 석식 이면 반찬도 표시. 선택한 반찬이 없으면 X 표시
+                if (meal.selectedMealType in listOf("조식", "중식", "석식")) {
+                    Text(
+                        text = "반찬: ${meal.selectedSideDishes ?: "X"}",
+                        style = TextStyle(
+                            fontFamily = Nanum,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Normal,
+                            color = Color.Black
+                        )
+                    )
+                }
+
                 Text(
                     text = "칼로리: ${meal.mealCalories} kcal",
                     style = TextStyle(
