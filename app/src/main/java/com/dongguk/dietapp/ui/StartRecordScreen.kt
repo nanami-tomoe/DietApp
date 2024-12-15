@@ -1,6 +1,5 @@
 package com.dongguk.dietapp.ui
 
-import android.media.Image
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -26,7 +25,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dongguk.dietapp.R
-import com.dongguk.dietapp.ui.theme.LightGray
 import com.dongguk.dietapp.ui.theme.Orange01
 
 val Nanum = FontFamily(Font(R.font.nanum_square_neo_rg))

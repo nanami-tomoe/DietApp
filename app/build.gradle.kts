@@ -1,6 +1,4 @@
 plugins {
-//    alias(libs.plugins.android.application)
-//    alias(libs.plugins.jetbrains.kotlin.android)
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
@@ -62,10 +60,10 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation("org.jetbrains.compose.material3:material3:1.7.1")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.10")
-    implementation("io.coil-kt:coil-compose:2.7.0")
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.coil.compose)
+    implementation(libs.kotlin.reflect)
+    implementation(libs.kotlin.stdlib.v1910)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
